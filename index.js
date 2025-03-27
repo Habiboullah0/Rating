@@ -9,6 +9,7 @@ const ratingsFilePath = 'ratings.json'; // ملف لحفظ التقييمات
 
 app.use(cors()); // تفعيل CORS لجميع المسارات (يمكن تخصيصه لاحقًا)
 app.use(bodyParser.json());
+app.use(express.static(__dirname));
 
 // دالة مساعدة لقراءة التقييمات من الملف
 async function loadRatingsFromFile() {
